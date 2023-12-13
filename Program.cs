@@ -54,6 +54,14 @@ class Program
 
         Console.WriteLine($"Math.Pow Result: {mathPowResult}");
         Console.WriteLine($"Time taken for Math.Pow: {mathPowStopwatch.Elapsed}");
+
+        //Measure time for Math.sqrt
+        Stopwatch sqrtStopwatch = Stopwatch.StartNew();
+        double sqrtResult = SquareRoot(randomNumber);
+        sqrtStopwatch.Stop();
+
+        Console.WriteLine($"Square Root Result: {sqrtResult}");
+        Console.WriteLine($"Time taken for Math.Sqrt: {sqrtStopwatch.Elapsed}");
     }
 
     static float AddFloats(float a, float b)
@@ -74,5 +82,10 @@ class Program
     static double SquareByMathPow(double number)
     {
         return Math.Pow(number, 2);
+    }
+
+    static double SquareRoot(double number)
+    {
+        return Math.Sqrt(number);
     }
 }
